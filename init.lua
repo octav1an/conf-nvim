@@ -36,6 +36,9 @@ vim.opt.colorcolumn = "80" -- adds a column element after at the 80th width
 
 vim.opt.spell = true
 vim.opt.spelllang = { "en_us" }
+-- make the whitespace visible
+vim.opt.list = true
+vim.opt.listchars = { space = '·', tab = '→ ' }
 
 vim.g.mapleader = " "
 
