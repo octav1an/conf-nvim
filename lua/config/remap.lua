@@ -17,3 +17,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = tr
 vim.keymap.set("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
 vim.keymap.set("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
 
+-- Paste below `pb` and paste above `pa`
+vim.keymap.set("n", "<leader>pb", ":put +<CR>", { silent = true, desc="Paste below"})
+vim.keymap.set("n", "<leader>pa", ":put! +<CR>", { silent = true, desc="Paste above"})
+
+vim.keymap.set("n", "<leader>o", ":put =''<CR>", { silent = true, desc="Insert empty line below"})
+vim.keymap.set("n", "<leader>O", ":put! =''<CR>", { silent = true, desc="Insert empty line above"})
+
