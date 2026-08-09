@@ -43,4 +43,4 @@ vim.opt.listchars = { space = '·', tab = '→ ' }
 vim.g.mapleader = " "
 
 -- LSP configs
-vim.lsp.enable({"gopls", "lua_ls", "pyright", "ruff"})
+vim.lsp.enable({"gopls", "lua_ls", "basedpyright", "ruff", "markdown_oxide"})
