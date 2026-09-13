@@ -6,6 +6,12 @@ vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "Find files"
 vim.keymap.set("n", "<leader>fw", "<cmd>FzfLua live_grep<cr>", { desc = "Live grep" })
 vim.keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>", { desc = "Find buffers" })
 vim.keymap.set("n", "<leader>fh", "<cmd>FzfLua help_tags<cr>", { desc = "Find help" })
+vim.keymap.set("n", "<leader>fF", function()
+  require("fzf-lua").files({
+    hidden = true,
+    no_ignore = true,
+  })
+end, { desc = "Find files (including gitignored)" })
 
 vim.keymap.set("n", "<leader>fe", "<cmd>FzfLua blines<cr>", { desc = "Find lines in current buffer" })
 
