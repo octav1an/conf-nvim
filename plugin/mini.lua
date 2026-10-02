@@ -12,4 +12,20 @@ require('mini.comment').setup()
 require('mini.cmdline').setup()
 require('mini.pairs').setup()
 
-vim.keymap.set("n", "<leader>e", "<cmd>lua MiniFiles.open()<cr>", { desc = "Open mini.files"})
+vim.keymap.set("n", "<leader>e", function()
+  MiniFiles.open(nil, false, {
+    content = {
+      filter = function(fs_entry)
+        return not vim.startswith(fs_entry.name, ".")
+      end,
+    },
+  })
+end)
+
+vim.keymap.set("n", "<leader>E", function()
+  MiniFiles.open(nil, false, {
+    content = {
+      filter = nil,
+    },
+  })
+end)
