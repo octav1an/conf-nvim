@@ -6,7 +6,7 @@ vim.pack.add({
     "https://github.com/nvim-mini/mini.pairs"
 })
 
-require('mini.files').setup()
+require('mini.files').setup({options = {lsp_timeout=0}})
 require('mini.icons').setup()
 require('mini.comment').setup()
 require('mini.cmdline').setup()
