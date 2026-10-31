@@ -42,5 +42,9 @@ vim.opt.listchars = { space = '·', tab = '→ ' }
 
 vim.g.mapleader = " "
 
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "both"
+
 -- LSP configs
-vim.lsp.enable({"gopls", "lua_ls", "basedpyright", "ruff", "markdown_oxide"})
+-- vim.lsp.enable({"gopls", "lua_ls", "basedpyright", "ruff", "markdown_oxide", "ansiblels"})
+vim.lsp.enable({"gopls", "lua_ls", "basedpyright", "ruff", "marksman", "ansiblels"})
