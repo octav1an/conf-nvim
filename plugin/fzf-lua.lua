@@ -15,11 +15,36 @@ end, { desc = "Find files (including gitignored)" })
 
 vim.keymap.set("n", "<leader>fe", "<cmd>FzfLua blines<cr>", { desc = "Find lines in current buffer" })
 
+-- Git related keymaps
 vim.keymap.set("n", "<leader>fgb", "<cmd>FzfLua git_branches<cr>", { desc = "Find git branches" })
 vim.keymap.set("n", "<leader>fgc", "<cmd>FzfLua git_commits<cr>", { desc = "Find git commits" })
-vim.keymap.set("n", "<leader>fgs", "<cmd>FzfLua git_status<cr>", { desc = "Find git status" })
+vim.keymap.set("n", "<leader>fgs", function()
+    require("fzf-lua").git_status({
+        winopts = {
+            preview = {
+                layout = "vertical",
+                vertical = "down:60%",
+            },
+        },
+    })
+end,
+{ desc = "Find git status" })
 
+-- LSP related keymaps
 vim.keymap.set("n", "<leader>ft", "<cmd>FzfLua treesitter<cr>", { desc = "Find tree sitter symbols" })
 vim.keymap.set("n", "<leader>flr", "<cmd>FzfLua lsp_references<cr>", { desc = "Find in LSP reference" })
+vim.keymap.set("n", "<leader>fs", function()
+    require("fzf-lua").lsp_document_symbols({
+        winopts = {
+            preview = {
+                layout = "vertical",
+                vertical = "down:40%",
+            },
+        },
+    })
+end,
+{desc = "Find in lsp document symbols (outline)"})
 
 vim.keymap.set("n", "<leader>fk", "<cmd>FzfLua keymaps<cr>", { desc = "Find in keymaps" })
+
+
