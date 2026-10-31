@@ -48,6 +48,10 @@
       "rev": "03eb1f0062a2cee5314d1ac3939246e4bb21352e",
       "src": "https://github.com/nvim-mini/mini.pairs"
     },
+    "mkdnflow.nvim": {
+      "rev": "272148c4bd1996380b9b540540758d57667e59c4",
+      "src": "https://github.com/jakewvincent/mkdnflow.nvim"
+    },
     "nvim-lspconfig": {
       "rev": "460bb34e7be114f1fda7815781696bc701e60f83",
       "src": "https://github.com/neovim/nvim-lspconfig"
