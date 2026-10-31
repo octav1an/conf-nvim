@@ -27,3 +27,4 @@ vim.keymap.set("n", "<leader>mt", function()
         },
     })
 end, { desc = "Find in markdown TOC" })
+
