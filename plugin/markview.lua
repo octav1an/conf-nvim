@@ -10,7 +10,7 @@ require("markview").setup({
             marker_minus = {
                 text = "⚬",
                 hl = "MarkviewListItemMinus",
-                add_padding = false,
+                add_padding = true,
             },
         },
     },
