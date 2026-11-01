@@ -14,6 +14,17 @@ vim.keymap.set("n", "<leader>fF", function()
 end, { desc = "Find files (including gitignored)" })
 
 vim.keymap.set("n", "<leader>fe", "<cmd>FzfLua blines<cr>", { desc = "Find lines in current buffer" })
+vim.keymap.set("n", "<leader>fd", function()
+    require("fzf-lua").diagnostics_document({
+        winopts = {
+            preview = {
+                layout = "vertical",
+                vertical = "down:50%",
+            },
+        },
+    })
+end,
+{ desc = "Find diagnostics in current buffer" })
 
 -- Git related keymaps
 vim.keymap.set("n", "<leader>fgb", "<cmd>FzfLua git_branches<cr>", { desc = "Find git branches" })
